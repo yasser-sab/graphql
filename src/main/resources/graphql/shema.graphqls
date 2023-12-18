@@ -1,0 +1,23 @@
+type Query{
+    getUserByEmail(email:String):User
+    getUserByDate(date:String):User
+}
+
+type Mutation{
+    saveUser(user:UserDTO):User
+    deleteUserr(id:ID):User
+}
+
+input UserDTO{
+    name:String,
+    email:String,
+    date_Naissance:String
+}
+
+type User{
+    id:ID,
+    name:String,
+    email:String,
+    date_Naissance:String
+}
+
